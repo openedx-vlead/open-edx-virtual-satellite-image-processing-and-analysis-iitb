@@ -1,0 +1,56 @@
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">In image processing literature, the weighting averaging operation is referred to as image smoothing. Smoothening is a process by which noise in the image can be reduced. Smoothening depends on the neighborhood pixels and if there is some unwanted peaks or valleys within an uniform region then it is supressed by the smoothening process. By smoothing, it is implied that local differences between pixels are reduced. Drawback of smoothening is that the edge pixels also gets smoothened which is not desirable in some cases.</span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">For better understanding of image smoothing you must go through the recommended video below: <br /> There are several ways through which one can obtain smoothened image. Some of the methods are:</span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b> Mean (Simple Averaging)</b> </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> In simple averaging, the output gray level is the average of the gray levels of all the pixels in the neighborhood. For example, <br /> Simple averaging for a 3x3 neighborhood window: <br /> A B C <br /> D X E <br /> F G H <br /> the gray level at X will be given as: <br /> g(X) = (1/9)[f(A) + f(B) + f(C) + f(D) + f(X) +f(E) + f(F) + f(G) + f(H) <br /> where f(.) is gray level of neighbors </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Smoothing Using Averaging</b> </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Weighted Averaging</b> </span></p>
+<p><br /> <img src="http://civil11-iitb.vlabs.ac.in/exp3/images/image002.jpg" style="height: 80px; width: 190px;" /> </p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> In case different weights are preferred for different neighbors, then we can write </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> For simple averaging over a 3x3 neighborhood, wi = (1/9), i=1,2,&hellip;,9. We can alter, for example, the weights for 4-neighbors and 8-neighbors. In such a case, wi is not a constant for all values of i. </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Weighted Averaging</b> </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Smoothing Using Lee Filter </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"></span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Simple Lee filter </span></p>
+<ul>
+<ul>
+<li>gij = fmean + k.|(fij &ndash; fmean)|</li>
+<li>k varies between 0 and 2</li>
+k = 0, gij = fmean, which denotes simple averaging </ul>
+</ul>
+<p></p>
+<ul>
+<ul> k = 1, gij = fij, which denotes no smoothing at all </ul>
+</ul>
+<p></p>
+<ul>
+<ul> k = 2, gij = fij + |(fij &ndash; fmean)|, which denotes sharpening </ul>
+</ul>
+<p></p>
+<ul> For better understanding go through the video for Lee Filtering.</ul>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Using Lee Filter</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Median Filtering</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Median filter is the most commonly used non-linear filter for image smoothing. When the image is corrupted by random salt-and-pepper noise, median operation is very effective in removing the noise, without degrading the input image. It can be expressed as: <br /> gij = median {fi-k,j-l | k,l=-w, &hellip;, o, &hellip;, w} <br /> In median filtering, the extreme values are pushed to one end of the sequence after sorting, hence ignored when filtered. </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Working of Median Filter :</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Consider the size of the window around the pixel. Collect all the pixels in the window and sort them in ascending / descending order. Select the gray level after sorting, according to the rank criterion. </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Median Filtering</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Mode Filtering</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> It is a non-linear filter. Central pixel is assigned the gray level that occurs most frequently in the neighborhood. It can be expressed as: <br /> gij = mode{fi-k,j-l | k,l=-w, &hellip;, o, &hellip;, w} <br /> For example, fn = 11 12 14 15 <b><u>12</u></b> 16 11 15 15 <br /> Here, <b><u>12</u></b> is replaced by 15, which occurs most frequently in the neighborhood. </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Mode Filtering</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Gaussian Filtering</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Gaussian filter uses the gaussian function to assign weights to the neighborhoods. The weight matrix is given as: <br /> <img src="http://civil11-iitb.vlabs.ac.in/exp3/images/image004.jpg" style="height: 80px; width: 190px;" /> <br /> where r and c are row and column of weight matrix respectively and </span></p>
+<p><br /> <img src="http://civil11-iitb.vlabs.ac.in/exp3/images/image006.jpg" style="height: 90px; width: 190px;" /></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Gaussian Filtering</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Sigma Filtering</b> <br /> When the filtering operation is required to adapt to the local intensity variations then the filter coefficients should vary according to the position in the image. Shift-variant filters can preserve the object boundaries better, while smoothing the image. Sigma filter is one of the shift-variant filter. </span></p>
+<p></p>
+<h3 style="font-weight: bold;"><span style="font-family: 'Verdana','sans-serif';" lang="EN-IN"> Working of Sigma Filter: </span></h3>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"></span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Consider neighborhood size, and a constant value c (can be taken as 1 or 2). Find the mean and standard deviation of the pixels within the neighborhood. Find the neighbors of the central pixel whose gray levels are within c*(standard deviation) of the central pixel&rsquo;s gray level. Compute the average of the pixels meeting the above criterion. Replace the central pixel&rsquo;s value by the average. <br /> <b>Note: This cannot be replaced by a convolution since the filter response varies for each position in the image.</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video For Sigma Filtering</b> </span></p>

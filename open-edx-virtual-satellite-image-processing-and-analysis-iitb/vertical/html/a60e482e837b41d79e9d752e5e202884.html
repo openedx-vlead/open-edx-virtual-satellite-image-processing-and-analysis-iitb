@@ -1,0 +1,33 @@
+<h2>Discrete 2D Fourier Tansform</h2>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">A transform, including the Fourier Transform (FT), is essentially a mathematical mapping process. A transform maps image data into a different mathematical space via a transformation equation. Most of the discrete transforms map the image data from the spatial domain to the frequency domain, where all the pixels in the input (spatial domain) contribute to each value in the output (frequency domain). Rapidly changing brightness values over short distances correspond to high frequency terms, slowly changing brightness values correspond to low frequency terms.</span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Display of Fourier Transform</b> </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> The Fourier transform consists of complex floating point numbers, stored with a data type of complex. For convenience of viewing, we shift the origin to the center of the image by applying the properties of periodicity and translation with u<sub>0</sub> = M/2 and v<sub>0</sub> = N/2. </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Advantages of Centering Fourier Transform Display</b> <br /> </span></p>
+<ul>
+<li>Easier to interpret the spectral information with the origin in the center and frequency increasing radially outward from the center.</li>
+<li>Makes it easier to visualize the filtering in the frequency domain.</li>
+<li>Visually more appealing</li>
+</ul>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video for Fourier Transform and its Display settings:</b> </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Butterworth Low pass Filter</b> </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> The Butterworth low pass filter has a frequency response given by the function: </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Where, D(u,v) is the distance of any frequency component (u,v) from the origin. D<sub>o</sub> is the cut-off frequency. </span></p>
+<p></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>2-D Gaussian Low Pass Filter</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"></span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> The frequency response of the 2-D Gaussian Lowpass Filter is given by: </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Where, D(u,v) is the distance of any frequency component (u,v) from the origin. D<sub>o</sub> is the cut-off frequency. </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Highpass Filters</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Similar to Gaussian and Butterworth low pass filters, there are Gaussian and Butterworth high pass filters too. These filters can be expressed as: </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Gaussian high pass filter</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Butterworth high pass filter</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video for Low Pass and High Pass Filtering:</b> </span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Video for Gaussian and Butterworth Filtering: </b> </span></p>

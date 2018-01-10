@@ -1,0 +1,75 @@
+<div class="content" id="experiment-article-section-10-content">
+<div class="divContent">
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">Here we will discuss how to interpret the outputs produced by experiment 2, i.e., Contrast Enhancement. So, please follow the steps as shown below to get the sample output for interpretation.</span></p>
+<br /><ol start="1" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Select "inputimage" as your experimental image. "inputimage" is a satellite image having 6 bands stored in BIL format as raw image. It has the dimension 801x1401. Since in our discussion we will cover upto its 4th band, so it is necessary to understand that what the first 4 bands of this image represents. The first four bands are as follows: blue, green, red and infra-red respectively. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="2" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Select band 4 for red band, band 3 for green band and band 2 for blue band. As according to the theory described in theory section of Virtual Lab, we already know that a standard FCC uses infra-red wave band as red display, red wave band as green display and green wave band as blue display. So, the same we are doing here to get the standard FCC of "inputimage". </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="3" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Click on Display button <br /> After the processing you will get an image. This is the standard FCC of "inputimage". You can also save it by right clicking it and then clicking on "save image as". The image will look like: <br /> You will also get histogram for the bands selected for display. The histogram in our case will be: </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Histogram for Infra-red Band (displayed as red in fcc):</b></span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, you can easily notice that most of the pixels are assigned between grey level 10 to 20. Also, another majority of pixels are assigned to gray level 60 to 120. We, will be comparing the histograms of the three bands (green, red and infra-red) used in the example for understanding what we can easily get from image histogram.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Histogram for Red Band (displayed as green in fcc):</b></span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, it can be noticed that most of the pixels are assigned between gray level 25 to 70 and a wide range of grey level is not used.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Histogram for Green Band (displayed as blue in fcc): </b></span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, it is almost similar to red band, i.e., most of the pixels are assigned between gray level 30 to 70. Now, as seen from the histogram of the three bands, it can be concluded that the contrast of infra-red band is highest among these three bands. As it has been provided in theory (see video lecture), that for a good contrast a histogram should be well distributed among all the gray levels. Other attributes that we can get from histogram are: mean, median, variance, standard deviation, etc. (see video lecture).</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Now, we are going to apply contrast enhancement over "inputimage". To do so, continue your steps in the experiment as:</b></span></p>
+<ol start="4" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Choose the filter to be used for smoothing. Here we will choose "Average Filter". (It is set by default)<br /> Here, we are going to interpret the results after application of smoothing using simple average filter. A simple average filter considers the pixel values of neighbors of central pixel, sums them and takes their average according to the dimensions of neighborhood window, which we are going to select in the next step. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="5" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Enter "3" as "no. of rows". </span></li>
+</ol><ol start="6" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Enter "3" as "no. of columns" </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; Here, we have selected a 3x3 neighborhood window for averaging. you should always use odd values in defining the neighborhood window as it becomes easier to get the central element.</span></p>
+<br /><ol start="7" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Click on "Process" button. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; You will get the smoothened image and histogram of each band used for display after smoothing, which will be as follows:</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Smoothened image</b></span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Histogram after enhancement for red band</b></span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Histogram after enhancement for green band</b></span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Histogram after enhancement for blue band</b></span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; After averaging, some of the gray levels are merged together. So, where there were sharp difference in gray level among neighbors, it becomes less. So, the edges (which are formed due to large difference in pixel values of neighborhood pixels and central pixels) becomes blurred. The advantage of smoothing is that shot and pipper noise can be removed to a large extent. Size of neighborhood window greatly effects the output of smoothing.</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Interpretation using histograms</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; As, some of the gray levels are merged in case of smoothing, the convex hull of histogram after smoothing becomes zaggy.</span></p>
+<br />
+<h3><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; SMOOTHING</span></h3>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; The image shown below is original sample image of quickbird.jpg. Please note that edges are the boundaries of objects/features. For example in figure below the boundary of bean shaped feature is called as its edge.</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Weighted Average</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; The figure below is smoothened image using weighted average method. The coefficients used are 0.1 (8 numbers) and 0.2. It is clearly discernible that the image below is <strong> blurred </strong> when compared to original image shown above. The <strong> edges now look less sharp </strong> than before smoothening.</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Lee filter</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; A smoothened image using Lee filter is shown below. Blurring of the image can be seen clearly. The <strong> edges now look less sharp </strong> than before smoothening. Factor (k)= 0.5</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Median filter</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; A smoothened image using Median filter is shown below. Blurring of the image can be seen clearly. The edges now look less sharp than before smoothening</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Mode filter</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; A smoothened image using Mode filter is shown below. Blurring of the image is too high and can be seen clearly. The <strong>edges now look less sharp </strong>than before smoothening and the <strong>feature colors look much darker </strong>.</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Gaussian filter</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; A smoothened image using Gaussian filter is shown below. Blurring of the image can be seen clearly. The <strong> edges now look less sharp than before smoothening</strong></span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Sigma filter</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; A smoothened image using Sigma filter is shown below. Blurring of the image can be seen clearly. The <strong> edges now look less sharp than before smoothening</strong>. Sigma value used is 1.8 and window size 3x3.</span></p>
+<br />
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; <b>Circular filter</b></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp; A smoothened image using Circular filter is shown below. Blurring of the image can be seen clearly. <strong> The edges now look less sharp than before smoothening.</strong></span></p>
+</div>
+</div>

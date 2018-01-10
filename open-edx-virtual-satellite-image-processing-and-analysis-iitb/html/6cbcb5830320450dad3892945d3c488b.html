@@ -1,0 +1,60 @@
+<div class="content" id="experiment-article-section-10-content">
+<div class="divContent">
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">In the field of computer vision, image histograms can be useful tools for thresholding. Because the information contained in the graph is a representation of pixel distribution as a function of tonal variation, image histograms can be analyzed for peaks and/or valleys which can then be used to determine a threshold value. This threshold value can then be used for edge detection, image segmentation.</span></p>
+<br /><ol start="1" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Select "inputimage" as your experimental image. "inputimage" is a satellite image having 6 bands stored in BIL format as raw image. It has the dimension 801x1401. Since in our discussion we will cover upto its 4th band, so it is necessary to understand that what the first 4 bands of this image represents. The first four bands are as follows: blue, green, red and infra-red respectively. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="2" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Choose "view color composite", it is already set as default. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="3" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Select band 4 for red band, band 3 for green band and band 2 for blue band. As according to the theory described in theory section of Virtual Lab, we already know that a standard FCC uses infra-red wave band as red display, red wave band as green display and green wave band as blue display. So, the same we are doing here to get the standard FCC of "inputimage". </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="4" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Click on Display button </span></li>
+</ol>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">After the processing you will get an image. This is the standard FCC of "inputimage". You can also save it by right clicking it and then clicking on "save image as". The image will look like:</span></p>
+<br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/exp1_fcc.jpg" style="height: 315px; width: 80%;" />
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN">You will also get histogram for the bands selected for display. The histogram in our case will be:</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Histogram for Infra-red Band (displayed as red in fcc):</b></span></p>
+<br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/exp1_hist_red.jpg" style="height: 380px; width: 589px;" />
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, you can easily notice that most of the pixels are assigned between grey level 10 to 20. Also, another majority of pixels are assigned to gray level 60 to 120. We, will be comparing the histograms of the three bands (green, red and infra-red) used in the example for understanding what we can easily get from image histogram.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Histogram for Red Band (displayed as green in fcc):</b></span></p>
+<br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/exp1_hist_green.jpg" style="height: 380px; width: 589px;" />
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, it can be noticed that most of the pixels are assigned between gray level 25 to 70 and a wide range of grey level is not used.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Histogram for Green Band (displayed as blue in fcc): </b></span></p>
+<br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/exp1_hist_blue.jpg" style="height: 380px; width: 589px;" />
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, it is almost similar to red band, i.e., most of the pixels are assigned between gray level 30 to 70. Now, as seen from the histogram of the three bands, it can be concluded that the contrast of infra-red band is highest among these three bands. As it has been provided in theory (see video lecture), that for a good contrast a histogram should be well distributed among all the gray levels. Other attributes that we can get from histogram are: mean, median, variance, standard deviation, etc. (see video lecture).</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> <b>Now, we are going to interpret the image at pixel level. To do so, continue your steps in the experiment as:</b></span></p>
+<ol start="5" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Select the option "Image subset and pixel value of each band". (It is set by default)<br /> Here, you can provide the upper and lower coordinates of the subset image that you want to extract and for which you want to see the pixel values. It can be done either manually or by clicking the respective buttons. But, to match the values with our example values, follow the steps. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="6" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Enter "83" in "minimum row value". </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="7" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Enter "88" in "maximum row value". </span></li>
+</ol>
+<p class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> &nbsp;</span></p>
+<ol start="8" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Enter "309" in "minimum column value". </span></li>
+</ol><ol start="9" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Enter "314" in "maximum column value" <br /> By doing so, we are going to extract a 6x6 subset from the image. </span></li>
+</ol><ol start="10" type="1">
+<li class="MsoNormal" style="line-height: 150%;"><span style="font-size: 12pt; line-height: 150%; font-family: 'Arial','sans-serif';" lang="EN-IN"> Click on generate button. </span></li>
+</ol>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> You will get the subset image and its band values, which will be as follows:</span></p>
+<br /> <b>subset image</b> <br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/exp1_subset.jpg" style="height: 5px; width: 5px;" /> <br /> <b>pixel image</b> <br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/t1.png" style="height: 380px; width: 300px;" /> <br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/t2.png" style="height: 380px; width: 300px;" />
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> This shows the pixel data for all 6 bands, while we have used only three band 4, band 3, band2. So, we will be discussing the pixel values of these three bands only.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here it can be noticed that in this subset of image, the pixel values for band 4 are highest, while in other bands these values are very less comparatively. Now we will see the spectrum for various objects on earth in different wavebands to understand the concept.</span></p>
+<br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/spectral%20response.jpg" style="height: 380px; width: 589px;" />
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Since, pixels values are the measure of % reflectance, we can use this graph to compare our pixel value with its %reflectance. It can be easily noticed that the curve shown in green color (healthy vegetation) can be compared to our pixel values as its value before infra-red and after infra-red region are very less as compared to that in infra-red region.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> So, in this case we can interpret that regions shown in perfect red color in standard FCC as the regions of healthy vegetation.</span></p>
+<p class="PreformattedText" align="justify"><span style="font-size: 12pt; font-family: 'Verdana','sans-serif';" lang="EN-IN"> Here, it can also be noticed from the curve that in case of water, %reflectance is nearly zero after red band. So, you can take it as an exercise to see whether the pixel values of image predict the same or not. Just make a subset of a region shown below and take a look on pixel values of each band for the subset marked below (red circle marked at upper left corner). You will get what kind of region it is using the curve shown.</span></p>
+<br /> <img src="http://civil11-iitb.vlabs.ac.in/exp1/images/exp1_test.JPG" style="height: 367px; width: 654px;" /></div>
+</div>
